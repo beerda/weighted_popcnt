@@ -48,7 +48,7 @@ public:
         return result;
     }
 
-    double sum(std::vector<float> weights) const
+    double sum(const std::vector<float>& weights) const
     {
         if (weights.size() != size_) {
             throw std::invalid_argument("Weights size must match BitChain size");
@@ -57,7 +57,7 @@ public:
         double total = 0.0;
         size_t word_index = 0;
         size_t bit_index = 0;
-        for (std::size_t index = 0; index < size_; ++index) {
+        for (size_t index = 0; index < size_; ++index) {
             if (bit_index == bits_per_word_) {
                 ++word_index;
                 bit_index = 0;

@@ -32,7 +32,7 @@ public:
         return result;
     }
 
-    double sum(std::vector<float> weights) const
+    double sum(const std::vector<float>& weights) const
     {
         if (weights.size() != size()) {
             throw std::invalid_argument("Weights size must match VectorChain size");
