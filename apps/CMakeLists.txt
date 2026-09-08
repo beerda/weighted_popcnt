@@ -2,7 +2,8 @@ add_executable(weighted_popcnt main.cpp)
 target_link_libraries(weighted_popcnt PRIVATE weighted_popcnt_lib benchmark::benchmark)
 
 add_executable(unittest
-    unittest_Chain.cpp
+    unittest_SparseChain.cpp
+    unittest_VectorChain.cpp
 )
 target_link_libraries(unittest PRIVATE weighted_popcnt_lib GTest::gtest_main)
 
